@@ -4,7 +4,7 @@ import '../App.css';
 
 const Navbar = () => {
   return (
-      <nav className='flex justify-between items-center bg-[#F0F0F0] p-2 border-b border-gray-300 inter'>
+      <nav className='sticky top-0 z-50 flex justify-between items-center bg-[#F0F0F0] p-2 border-b border-gray-300 inter'>
         <div className='flex items-center gap-5 ml-3'>
             <a href="#"><img src="/blog-logo.png" alt="Blog Logo" className='w-10 h-10' /></a>
             <ul className='flex gap-5 text-sm'>

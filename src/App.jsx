@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Home from './pages/Home'
 import CreateBlogPage from "./pages/CreateBlogPage"
+import BlogViewPage from "./pages/BlogViewPage"
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="create-blog" element={<CreateBlogPage />} />
+        <Route path="view-blog" element={<BlogViewPage />} />
       </Routes>
     </BrowserRouter>
   )
