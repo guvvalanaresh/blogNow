@@ -6,6 +6,7 @@ import BlogCard from '../components/BlogCard'
 import Pagination from '../components/Pagination'
 
 const Home = () => {
+
   return (
     <div className='bg-[#F0F0F0]'>
       <Navbar />
@@ -21,9 +22,6 @@ const Home = () => {
           </div>
           <div className='flex flex-col gap-4 mr-4 mt-8 mb-10'>
             {/* Blog card component */}
-            <BlogCard />
-            <BlogCard />
-            <BlogCard />
             <BlogCard />
             <Pagination />
           </div>
