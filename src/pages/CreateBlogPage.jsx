@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useState, useRef} from 'react'
 import Navbar from '../components/BlogCreations/Navbar'
 import '../App.css'
+import CustomEditor from '../components/BlogCreations/Editor'
 
 const CreateBlogPage = () => {
   return (
@@ -40,7 +41,7 @@ const CreateBlogPage = () => {
               </div>
               <div>
                 <label htmlFor="" className='inter text-sm'>Content</label><br />
-                
+                <CustomEditor />
               </div>
            </div>
         </div>
