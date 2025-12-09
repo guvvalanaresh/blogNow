@@ -4,6 +4,7 @@ import CategoryCard from '../components/CategoryCard'
 import '../App.css'
 import BlogCard from '../components/BlogCard'
 import Pagination from '../components/Pagination'
+import { blogData } from '../data/blogData'
 
 const Home = () => {
 
@@ -22,7 +23,9 @@ const Home = () => {
           </div>
           <div className='flex flex-col gap-4 mr-4 mt-8 mb-10'>
             {/* Blog card component */}
-            <BlogCard />
+            {blogData.map((blog) => (
+                <BlogCard key={blog.id} blog={blog} />
+            ))}
             <Pagination />
           </div>
         </div>

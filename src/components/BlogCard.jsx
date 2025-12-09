@@ -1,20 +1,19 @@
 import React from 'react'
 import '../App.css'
-import { blogData } from '../data/blogData'
+// import { blogData } from '../data/blogData'
 
 
-const BlogCard = () => {
+const BlogCard = ( { blog } ) => {
   return (
     <>
-      {blogData.map((blog, index) => (
-        <section className='grid grid-cols-[2fr_1fr] gap-4 p-3 rounded-lg bg-white shadow-xs border-gray-300'>
+      <section className='grid grid-cols-[2fr_1fr] gap-4 p-3 rounded-lg bg-white shadow-xs border-gray-300'>
         {/* Content */}
         <div className='flex flex-col p-2'>
           {/* Date details */}
             <ul className='flex text-xs gap-1 mb-3 text-gray-500 nunito'>
-              <li>{blog.category}</li>&bull;
-              <li>{blog.status.readingTime}</li>&bull;
-              <li>{blog.status.date}</li>
+              {Object.values(blog.tags).map((tag, i) => (
+                <li key={i}>{tag}</li>
+              ))}
             </ul>
           {/* Title & Description */}
           <div className='flex flex-col justify-between mb-3'>
@@ -23,15 +22,14 @@ const BlogCard = () => {
           </div>
           {/* Button */}
           <div>
-            <button className='px-4 py-2 rounded-sm text-sm font-semibold bg-gray-100 cursor-pointer hover:bg-gray-200'>Read More</button>
+            <button className='px-4 py-2 rounded-sm text-sm font-semibold bg-gray-100 cursor-pointer hover:bg-gray-200' key={blog.id}>Read More</button>
           </div>
         </div>
         {/* Image */}
         <div className='h-full'>
-          <img src={blog.image} alt="Blog Image" className='w-full h-full object-cover rounded-md' />
+          <img src={blog.image} alt={blog.title} className='w-full h-full object-cover rounded-md' />
         </div>
       </section>
-      ))}
     </>
   )
 }

@@ -1,9 +1,10 @@
 export const blogData = [
     {
       id: 1,  
-      status:{
+      tags:{
+        category: "Design",
         readingTime: "8 min read",
-        date: "Oct 26, 2023"
+        date: "Oct 26, 2023",
       },
       category: "Design",
       title: "The Future of UI Design: Trends to Watch in 2024",
@@ -12,9 +13,10 @@ export const blogData = [
     },
     {
       id: 2,  
-      status:{
+      tags:{
+        category: "Design",
         readingTime: "5 min read",
-        date: "Oct 23, 2023"
+        date: "Oct 23, 2023",
       },
       category: "Design",
       title: "The Future of UI Design: Trends to Watch in 2024",
@@ -23,9 +25,10 @@ export const blogData = [
     },
     {
       id: 3,  
-      status:{
+      tags:{
+        category: "Design",
         readingTime: "8 min read",
-        date: "Oct 26, 2023"
+        date: "Oct 26, 2023",
       },
       category: "Design",
       title: "The Future of UI Design: Trends to Watch in 2024",
@@ -34,9 +37,10 @@ export const blogData = [
     },
     {
       id: 4,  
-      status:{
+      tags:{
+        category: "Design",
         readingTime: "8 min read",
-        date: "Oct 26, 2023"
+        date: "Oct 26, 2023",
       },
       category: "Design",
       title: "The Future of UI Design: Trends to Watch in 2024",
