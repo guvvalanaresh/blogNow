@@ -12,7 +12,10 @@ const BlogCard = ( { blog } ) => {
           {/* Date details */}
             <ul className='flex text-xs gap-1 mb-3 text-gray-500 nunito'>
               {Object.values(blog.tags).map((tag, i) => (
-                <li key={i}>{tag}</li>
+                <li key={i} className='flex items-center gap-1'>
+                  {i !== 0 && <span>&bull;</span>}
+                  <span>{tag}</span>
+                </li>
               ))}
             </ul>
           {/* Title & Description */}
