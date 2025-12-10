@@ -5,6 +5,7 @@ import './App.css'
 import Home from './pages/Home'
 import CreateBlogPage from "./pages/CreateBlogPage"
 import BlogViewPage from "./pages/BlogViewPage"
+import BlogEditPage from "./pages/BlogEditPage"
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="create-blog" element={<CreateBlogPage />} />
         <Route path="view-blog" element={<BlogViewPage />} />
+        <Route path="edit-blog" element={<BlogEditPage />} />
       </Routes>
     </BrowserRouter>
   )

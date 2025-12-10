@@ -1,0 +1,41 @@
+import {
+  Bold,
+  Italic,
+  Underline,
+  Strikethrough,
+  List,
+  ListOrdered,
+  Link as LinkIcon,
+  Image as ImageIcon,
+  Code,
+  RemoveFormatting,
+  Type,
+  CheckCircle2,
+  ChevronDown,
+  Sparkles,
+  Layers,
+  LayoutDashboard,
+  FileText,
+  User
+} from 'lucide-react';
+
+export const Icons = {
+  Bold,
+  Italic,
+  Underline,
+  Strikethrough,
+  List,
+  ListOrdered,
+  Link: LinkIcon,
+  Image: ImageIcon,
+  Code,
+  RemoveFormatting,
+  Type,
+  CheckCircle2,
+  ChevronDown,
+  Sparkles,
+  Layers,
+  LayoutDashboard,
+  FileText,
+  User
+};
