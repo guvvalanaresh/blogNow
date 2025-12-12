@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Header } from '../components/BlogEditPage/Header.jsx';
 import { Icons } from '../components/BlogEditPage/Icons.jsx';
-// import { generateDescription, refineContent } from './services/geminiService.js';
 
 // Initial dummy data matching the image
 const INITIAL_POST = {
