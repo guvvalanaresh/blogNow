@@ -6,17 +6,15 @@ import BlogCard from '../components/BlogCard'
 import Pagination from '../components/Pagination'
 import { blogData } from '../data/blogData'
 import { useSearch } from '../context/SearchContext'
-import { useLocation } from 'react-router-dom'
 
 const Home = () => {
   const { searchTerm } = useSearch();
   const [category, setCategory] = useState("");
 
   // To know the available categories
-  // const categories = [...new Set(blogData.map((blog) => blog.category))]
-  // console.log(categories);
+  const categories = [...new Set(blogData.map((blog) => blog.category))]
 
-  let filteredBlogs = category === "all" ? blogData : (category ? blogData.filter((blog)=> blog.category === category) : blogData);
+  let filteredBlogs = category ? blogData.filter((blog)=> blog.category === category) : blogData;
 
   if (searchTerm) {
     filteredBlogs = filteredBlogs.filter((b)=> {
@@ -25,7 +23,7 @@ const Home = () => {
     })
   }
   
-  console.log("Search Term:", searchTerm);
+  // console.log("Search Term:", searchTerm);
   // console.log(filteredBlogs);
 
   return (
@@ -33,7 +31,7 @@ const Home = () => {
       <Navbar />
       <div className='grid grid-cols-[250px_1fr] gap-4 ml-8 mt-6'>
         <div>
-          <CategoryCard />
+          <CategoryCard categories={categories} selectedCategory={category} setCategory={setCategory} />
         </div>
         {/* The main Page content goes here */}
         <div>

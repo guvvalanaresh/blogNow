@@ -1,9 +1,14 @@
 import React from 'react'
 import '../App.css'
 
-const CategoryCard = () => {
-
+const CategoryCard = ({ categories = [], selectedCategory = '', setCategory = () => {} }) => {
   const categoryClassName = 'px-3 py-2 rounded-sm nunito hover:bg-[#B4C6FC] hover:text-blue-700';
+
+  const handleClick = (cat) => (e) => {
+    e.preventDefault();
+    // Use empty string to represent "all posts"
+    setCategory(cat === 'All Posts' ? '' : cat);
+  }
 
   return (
     <section className='w-60 px-3 py-1 rounded-sm shadow-2xs border-gray-300 bg-white'>
@@ -13,12 +18,24 @@ const CategoryCard = () => {
       </div>
       <div className='mt-5 mb-2'>
         <ul className='flex flex-col text-sm'>
-          <a href="" className={`${categoryClassName}`}><li>All Posts</li></a>
-          <a href="" className={`${categoryClassName}`}><li>Technology</li></a>
-          <a href="" className={`${categoryClassName}`}><li>Design</li></a>
-          <a href="" className={`${categoryClassName}`}><li>Productivity</li></a>
-          <a href="" className={`${categoryClassName}`}><li>Marketing</li></a>
-          <a href="" className={`${categoryClassName}`}><li>Business</li></a>
+          <li>
+            <button
+              onClick={handleClick('All Posts')}
+              className={`${categoryClassName} w-full text-left ${selectedCategory === '' ? 'bg-[#B4C6FC] text-blue-700' : ''}`}
+            >
+              All Posts
+            </button>
+          </li>
+          {categories.map((cat) => (
+            <li key={cat} className='mt-1'>
+              <button
+                onClick={handleClick(cat)}
+                className={`${categoryClassName} w-full text-left ${selectedCategory === cat ? 'bg-[#B4C6FC] text-blue-700' : ''}`}
+              >
+                {cat}
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
     </section>
