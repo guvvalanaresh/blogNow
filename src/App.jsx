@@ -13,9 +13,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="create-blog" element={<CreateBlogPage />} />
-        <Route path="view-blog" element={<BlogViewPage />} />
-        <Route path="edit-blog" element={<BlogEditPage />} />
+        <Route path="/create-blog" element={<CreateBlogPage />} />
+        <Route path="/view-blog" element={<BlogViewPage />} />
+        <Route path="/edit-blog" element={<BlogEditPage />} />
       </Routes>
     </BrowserRouter>
   )

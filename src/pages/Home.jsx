@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { use } from 'react'
 import Navbar from '../components/Navbar'
 import CategoryCard from '../components/CategoryCard'
 import '../App.css'
@@ -7,6 +7,9 @@ import Pagination from '../components/Pagination'
 import { blogData } from '../data/blogData'
 
 const Home = () => {
+
+  const categories = [...new Set(blogData.map((blog) => blog.category))]
+  console.log(categories);
 
   return (
     <div className='bg-[#F0F0F0]'>

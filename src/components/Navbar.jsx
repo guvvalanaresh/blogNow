@@ -3,6 +3,7 @@ import { IoIosSearch } from "react-icons/io";
 import '../App.css';
 
 const Navbar = () => {
+  
   return (
       <nav className='sticky top-0 z-50 flex justify-between items-center bg-[#F0F0F0] p-2 border-b border-gray-300 inter'>
         <div className='flex items-center gap-5 ml-3'>

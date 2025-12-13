@@ -4,6 +4,7 @@ import '../App.css'
 
 
 const BlogCard = ( { blog } ) => {
+
   return (
     <>
       <section className='grid grid-cols-[2fr_1fr] gap-4 p-3 rounded-lg bg-white shadow-xs border-gray-300'>

@@ -14,11 +14,11 @@ export const blogData = [
     {
       id: 2,  
       tags:{
-        category: "Design",
+        category: "Technology",
         readingTime: "5 min read",
         date: "Oct 23, 2023",
       },
-      category: "Design",
+      category: "Technology",
       title: "The Future of UI Design: Trends to Watch in 2024",
       description: "A deep dive into the most anticipated user interface trends of the upcoming year, from AI integration to neo-brutalism.",
       image: "src/assets/images/blog-image.jpg",
@@ -26,11 +26,11 @@ export const blogData = [
     {
       id: 3,  
       tags:{
-        category: "Design",
+        category: "Productivity",
         readingTime: "8 min read",
         date: "Oct 26, 2023",
       },
-      category: "Design",
+      category: "Productivity",
       title: "The Future of UI Design: Trends to Watch in 2024",
       description: "A deep dive into the most anticipated user interface trends of the upcoming year, from AI integration to neo-brutalism.",
       image: "src/assets/images/blog-image.jpg",
@@ -38,11 +38,11 @@ export const blogData = [
     {
       id: 4,  
       tags:{
-        category: "Design",
+        category: "Marketing",
         readingTime: "8 min read",
         date: "Oct 26, 2023",
       },
-      category: "Design",
+      category: "Marketing",
       title: "The Future of UI Design: Trends to Watch in 2024",
       description: "A deep dive into the most anticipated user interface trends of the upcoming year, from AI integration to neo-brutalism.",
       image: "src/assets/images/blog-image.jpg",
