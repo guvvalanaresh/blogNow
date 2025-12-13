@@ -6,7 +6,7 @@ export default function BlogViewPage() {
   return (
     <div className="min-h-screen flex flex-col text-slate-900 bg-[#F0F0F0]">
       <Header />
-      <main className="flex-grow w-full">
+      <main className="grow w-full">
         <BlogPost />
       </main>
     </div>

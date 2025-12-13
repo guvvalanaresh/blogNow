@@ -12,12 +12,9 @@ const Home = () => {
   const { searchTerm } = useSearch();
   const [category, setCategory] = useState("");
 
-  const categories = [...new Set(blogData.map((blog) => blog.category))]
-  console.log(categories);
-
-  const { search } = useLocation();
-  const params = new URLSearchParams(search);
-  const q = params.get('q') ? params.get('q').toLowerCase() : '';
+  // To know the available categories
+  // const categories = [...new Set(blogData.map((blog) => blog.category))]
+  // console.log(categories);
 
   let filteredBlogs = category === "all" ? blogData : (category ? blogData.filter((blog)=> blog.category === category) : blogData);
 
@@ -27,15 +24,9 @@ const Home = () => {
       return hay.includes(searchTerm.toLowerCase());
     })
   }
-
-  if (q) {
-    filteredBlogs = filteredBlogs.filter((blog) => {
-    const hay = `${blog.title} ${blog.category} ${blog.description || ''}`.toLowerCase()
-    return hay.includes(q)
-    })
-  }
-
-  console.log(q);
+  
+  console.log("Search Term:", searchTerm);
+  // console.log(filteredBlogs);
 
   return (
     <div className='bg-[#F0F0F0]'>

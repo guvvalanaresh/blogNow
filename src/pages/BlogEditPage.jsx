@@ -82,7 +82,7 @@ export default function BlogEditPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col font-sans">
       <Header />
 
-      <main className="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Page Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
           <h1 className="text-3xl font-black text-gray-900 tracking-tight">Edit Post</h1>
@@ -217,7 +217,7 @@ export default function BlogEditPage() {
                 <ToolbarBtn icon={<Icons.Image size={18} />} />
                 <ToolbarBtn icon={<Icons.Code size={18} />} />
                 
-                <div className="flex-grow"></div>
+                <div className="grow"></div>
 
                 {/* Utility */}
                 <button 
@@ -233,7 +233,7 @@ export default function BlogEditPage() {
               </div>
 
               {/* Editor Content Area */}
-              <div className="flex-grow p-8 bg-white rounded-b-xl cursor-text" onClick={() => contentEditableRef.current?.focus()}>
+              <div className="grow p-8 bg-white rounded-b-xl cursor-text" onClick={() => contentEditableRef.current?.focus()}>
                 <textarea
                   ref={contentEditableRef}
                   value={post.content}
