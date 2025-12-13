@@ -1,15 +1,17 @@
 import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import viteLogo from '/vite.svg'
+// viteLogo import removed — unused
 import './App.css'
 import Home from './pages/Home'
 import CreateBlogPage from "./pages/CreateBlogPage"
 import BlogViewPage from "./pages/BlogViewPage"
 import BlogEditPage from "./pages/BlogEditPage"
+import { SearchProvider } from './context/SearchContext'
 
 function App() {
 
   return (
+    <SearchProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,6 +20,7 @@ function App() {
         <Route path="/edit-blog" element={<BlogEditPage />} />
       </Routes>
     </BrowserRouter>
+    </SearchProvider>
   )
 }
 

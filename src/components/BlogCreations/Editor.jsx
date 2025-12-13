@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 
 export default function CustomEditor() {
   const editorRef = useRef(null);
@@ -159,6 +159,8 @@ export default function CustomEditor() {
           className="editor min-h-[220px] p-4 focus:outline-none leading-relaxed"
         ></div>
       </div>
+      {/* Hidden value to keep `content` referenced for form submissions or debug */}
+      <textarea className="hidden" value={content} readOnly />
     </div>
   );
 }

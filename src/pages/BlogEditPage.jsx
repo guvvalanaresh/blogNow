@@ -2,6 +2,16 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Header } from '../components/BlogEditPage/Header.jsx';
 import { Icons } from '../components/BlogEditPage/Icons.jsx';
 
+// Local no-op stubs for description generation/refinement until
+// an AI service is integrated.
+const generateDescription = async (content) => {
+  if (!content) return '';
+  const trimmed = content.replace(/\s+/g, ' ').trim();
+  return (trimmed.length > 160) ? trimmed.slice(0, 157).trim() + '...' : trimmed;
+};
+
+const refineContent = async (content) => content || '';
+
 // Initial dummy data matching the image
 const INITIAL_POST = {
   id: '1',
@@ -48,7 +58,7 @@ export default function BlogEditPage() {
     try {
       const desc = await generateDescription(post.content);
       setPost(prev => ({ ...prev, description: desc }));
-    } catch (e) {
+    } catch {
       alert("Failed to generate description. Please check your API key.");
     } finally {
       setIsGeneratingDesc(false);
@@ -61,7 +71,7 @@ export default function BlogEditPage() {
      try {
        const refined = await refineContent(post.content);
        setPost(prev => ({ ...prev, content: refined }));
-     } catch (e) {
+    } catch {
        alert("Failed to refine content.");
      } finally {
        setIsRefining(false);
