@@ -16,6 +16,18 @@ const Home = () => {
 
   let filteredBlogs = category ? blogData.filter((blog)=> blog.category === category) : blogData;
 
+  // Pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const PAGE_SIZE = 4;
+  const totalPages = Math.ceil(filteredBlogs.length / PAGE_SIZE);
+
+  // Reset to page 1 when filters change
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, category]);
+
+  const displayedBlogs = filteredBlogs.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+
   if (searchTerm) {
     filteredBlogs = filteredBlogs.filter((b)=> {
       const hay = `${b.title} ${b.category} ${b.description || ''} ${b.tags?.category ?? ''}`.toLowerCase();
@@ -41,14 +53,18 @@ const Home = () => {
           </div>
           <div className='flex flex-col gap-4 mr-4 mt-8 mb-10'>
             {/* Blog card component */}
-            {filteredBlogs.length > 0 ? (
-              filteredBlogs.map((blog) => (
+            {displayedBlogs.length > 0 ? (
+              displayedBlogs.map((blog) => (
                 <BlogCard key={blog.id} blog={blog} />
               ))
             ) : (
               <div className="p-8 text-center text-gray-500">No matching posts found.</div>
             )}
-            <Pagination />
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              setPage={setCurrentPage}
+            />
           </div>
         </div>
       </div>
