@@ -258,3 +258,5 @@ const ToolbarBtn = ({ icon, active = false }) => (
     {icon}
   </button>
 );
+
+// TODO: Do this edit page after completing the other functionalities and a buttin like edit and edit the details it should reflect on this particular blog. I think we can do this with id's.

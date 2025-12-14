@@ -21,7 +21,7 @@ const CategoryCard = ({ categories = [], selectedCategory = '', setCategory = ()
           <li>
             <button
               onClick={handleClick('All Posts')}
-              className={`${categoryClassName} w-full text-left ${selectedCategory === '' ? 'bg-[#B4C6FC] text-blue-700' : ''}`}
+              className={`${categoryClassName} w-full text-left cursor-pointer ${selectedCategory === '' ? 'bg-[#B4C6FC] text-blue-700' : ''}`}
             >
               All Posts
             </button>
@@ -30,7 +30,7 @@ const CategoryCard = ({ categories = [], selectedCategory = '', setCategory = ()
             <li key={cat} className='mt-1'>
               <button
                 onClick={handleClick(cat)}
-                className={`${categoryClassName} w-full text-left ${selectedCategory === cat ? 'bg-[#B4C6FC] text-blue-700' : ''}`}
+                className={`${categoryClassName} w-full text-left cursor-pointer ${selectedCategory === cat ? 'bg-[#B4C6FC] text-blue-700' : ''}`}
               >
                 {cat}
               </button>

@@ -43,6 +43,11 @@ const CreateBlogPage = () => {
                 <label htmlFor="" className='inter text-sm'>Content</label><br />
                 <CustomEditor />
               </div>
+              <div className='flex justify-end'>
+                <button className="px-3 py-1.5 text-sm rounded-md bg-[#3B82F6] hover:bg-[#2563EB] text-white font-semibold cursor-pointer">
+                    Publish Post
+                </button>
+              </div>
            </div>
         </div>
       </section>

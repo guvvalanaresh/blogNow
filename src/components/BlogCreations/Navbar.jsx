@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../App.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -12,8 +13,8 @@ const Navbar = () => {
             {/* Right Side */}
             <div className="flex items-center gap-3 mr-3">
                 <ul className='flex gap-5 text-sm'>
-                    <a href="#" className='hover:bg-gray-300 px-2 py-1 rounded-sm'><li>Dashboard</li></a>
-                    <a href="#" className='hover:bg-gray-300 px-2 py-1 rounded-sm'><li>View Posts</li></a>
+                    <Link to={'/'} className='hover:bg-gray-300 px-2 py-1 rounded-sm'><li>Dashboard</li></Link>
+                    <Link to={'/'} className='hover:bg-gray-300 px-2 py-1 rounded-sm'><li>View Posts</li></Link>
                 </ul>
                 <button className="px-3 py-1.5 text-sm rounded-md bg-[#3B82F6] hover:bg-[#2563EB] text-white font-semibold cursor-pointer">
                     New Post
