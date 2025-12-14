@@ -16,6 +16,14 @@ const Home = () => {
 
   let filteredBlogs = category ? blogData.filter((blog)=> blog.category === category) : blogData;
 
+  // Apply search filtering (ensure this runs before pagination calculations).We should check it first then only it will work properly.After that we can do pagination.
+  if (searchTerm) {
+    filteredBlogs = filteredBlogs.filter((b)=> {
+      const hay = `${b.title} ${b.category} ${b.description || ''} ${b.tags?.category ?? ''}`.toLowerCase();
+      return hay.includes(searchTerm.toLowerCase());
+    })
+  }
+
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
   const PAGE_SIZE = 4;
@@ -27,13 +35,6 @@ const Home = () => {
   }, [searchTerm, category]);
 
   const displayedBlogs = filteredBlogs.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
-
-  if (searchTerm) {
-    filteredBlogs = filteredBlogs.filter((b)=> {
-      const hay = `${b.title} ${b.category} ${b.description || ''} ${b.tags?.category ?? ''}`.toLowerCase();
-      return hay.includes(searchTerm.toLowerCase());
-    })
-  }
   
   // console.log("Search Term:", searchTerm);
   // console.log(filteredBlogs);

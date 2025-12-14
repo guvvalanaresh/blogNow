@@ -184,4 +184,17 @@ export const blogData = [
       "A practical guide to improving frontend performance using modern tools and best practices.",
     image: "src/assets/images/blog-image.jpg",
   },
+  {
+    id: 15,
+    tags: {
+      category: "Design",
+      readingTime: "6 min read",
+      date: "Nov 22, 2023",
+    },
+    category: "Design",
+    title: "Design Systems: Frontend",
+    description:
+      "Learn how design systems help teams build scalable, consistent, and efficient user interfaces.",
+    image: "src/assets/images/blog-image.jpg",
+  },
 ];
