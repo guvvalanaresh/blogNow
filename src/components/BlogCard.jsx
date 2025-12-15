@@ -1,11 +1,8 @@
 import React from 'react'
 import '../App.css'
-// import { blogData } from '../data/blogData'
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const BlogCard = ( { blog } ) => {
-
-  const navigate = useNavigate();
 
   return (
     <>
@@ -27,9 +24,9 @@ const BlogCard = ( { blog } ) => {
             <p className='line-clamp-2 nunito text-gray-500'>{blog.description}</p>
           </div>
           {/* Button */}
-          <div>
-            <button className='px-4 py-2 rounded-sm text-sm font-semibold bg-gray-100 cursor-pointer hover:bg-gray-200' key={blog.id} onClick={() => navigate('/view-blog')}>Read More</button>
-          </div>
+          <Link to={`/${blog.id}`} >
+            <button className='px-4 py-2 rounded-sm text-sm font-semibold bg-gray-100 cursor-pointer hover:bg-gray-200' key={blog.id}>Read More</button>
+          </Link>
         </div>
         {/* Image */}
         <div className='h-full'>

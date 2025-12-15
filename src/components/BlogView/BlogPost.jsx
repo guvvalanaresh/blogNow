@@ -2,22 +2,22 @@ import React from 'react';
 // import { Tag } from './Tag';
 import '../../App.css'
 
-export const BlogPost = () => {
+export const BlogPost = ( { blog }) => {
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       {/* Header Section */}
       <header className="mb-8">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4 leading-tight">
-          The Art of Minimalist Design
+          {blog.title}
         </h1>
         <p className="text-lg text-slate-500 italic mb-6 font-light">
-          Discover how less can be more in creating powerful user experiences.
+          {blog.description}
         </p>
         
         <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 font-medium">
-          <span>Published on Aug 12, 2023</span>
+          <span>Published on {blog.tags.date}</span>
           <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
-          <span>3 min read</span>
+          <span>{blog.tags.readingTime}</span>
           {/* <Tag label="UI/UX Design" /> */}
         </div>
       </header>
@@ -25,7 +25,7 @@ export const BlogPost = () => {
       {/* Featured Image */}
       <div className="w-full aspect-video rounded-2xl overflow-hidden mb-12 shadow-lg bg-slate-100">
         <img 
-          src="https://picsum.photos/seed/minimalist/1200/800" 
+          src={`${blog.image}`} 
           alt="Abstract geometric shapes representing minimalism" 
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
         />
