@@ -9,7 +9,7 @@ export const blogData = [
     category: "Design",
     title: "The Future of UI Design: Trends to Watch in 2024",
     description:
-      "A deep dive into the most anticipated user interface trends of the upcoming year, from AI integration to neo-brutalism.",
+      "An in-depth look at the most important UI design trends shaping digital products in 2024, including AI-driven interfaces, accessibility, and modern visual styles.",
     image: "src/assets/images/blog-image.jpg",
   },
   {
@@ -22,7 +22,7 @@ export const blogData = [
     category: "Technology",
     title: "Trends to Watch in 2024",
     description:
-      "A deep dive into the most anticipated user interface trends of the upcoming year, from AI integration to neo-brutalism.",
+      "A comprehensive overview of key technology, design, and development trends that will influence industries and professionals throughout 2024.",
     image: "src/assets/images/blog-image.jpg",
   },
   {
@@ -35,7 +35,7 @@ export const blogData = [
     category: "Productivity",
     title: "Watches in 2024",
     description:
-      "A deep dive into the most anticipated user interface trends of the upcoming year, from AI integration to neo-brutalism.",
+      "An exploration of smartwatch and watch industry trends in 2024, focusing on design innovation, health features, and performance improvements.",
     image: "src/assets/images/blog-image.jpg",
   },
   {
@@ -48,7 +48,7 @@ export const blogData = [
     category: "Marketing",
     title: "UI Design",
     description:
-      "A deep dive into the most anticipated user interface trends of the upcoming year, from AI integration to neo-brutalism.",
+      "A foundational guide to UI design principles, explaining how effective interfaces improve usability, engagement, and overall user experience.",
     image: "src/assets/images/blog-image.jpg",
   },
 
@@ -64,7 +64,7 @@ export const blogData = [
     category: "Design",
     title: "Minimalist Design: Less Is More in Modern UI",
     description:
-      "Explore how minimalist design principles improve usability, performance, and visual clarity in modern digital products.",
+      "A detailed guide to minimalist UI design, covering how simplicity, whitespace, and intentional layouts improve usability and visual clarity.",
     image: "src/assets/images/blog-image.jpg",
   },
   {
@@ -77,7 +77,7 @@ export const blogData = [
     category: "Technology",
     title: "AI in Web Development: What Developers Should Know",
     description:
-      "An overview of how artificial intelligence is transforming frontend and backend development workflows.",
+      "An overview of how artificial intelligence is changing web development workflows, from code generation and testing to personalization.",
     image: "src/assets/images/blog-image.jpg",
   },
   {
@@ -90,7 +90,7 @@ export const blogData = [
     category: "Productivity",
     title: "Daily Habits That Boost Developer Productivity",
     description:
-      "Simple daily habits and routines that help developers stay focused, productive, and burnout-free.",
+      "A practical breakdown of daily habits and routines that help developers stay focused, productive, and mentally balanced.",
     image: "src/assets/images/blog-image.jpg",
   },
   {
@@ -103,7 +103,7 @@ export const blogData = [
     category: "Marketing",
     title: "Content Marketing Strategies for Tech Startups",
     description:
-      "Learn proven content marketing techniques to grow traffic, build trust, and convert users in tech startups.",
+      "A practical guide to content marketing strategies that help tech startups grow traffic, build trust, and convert users effectively.",
     image: "src/assets/images/blog-image.jpg",
   },
   {
@@ -116,7 +116,7 @@ export const blogData = [
     category: "Design",
     title: "Dark Mode Design: Best Practices and Pitfalls",
     description:
-      "A practical guide to designing effective dark mode interfaces without compromising accessibility.",
+      "A practical guide to designing dark mode interfaces, highlighting best practices, accessibility considerations, and common mistakes to avoid.",
     image: "src/assets/images/blog-image.jpg",
   },
   {
@@ -129,7 +129,7 @@ export const blogData = [
     category: "Technology",
     title: "Understanding APIs: A Beginner’s Guide",
     description:
-      "A beginner-friendly explanation of APIs, how they work, and how developers use them in real projects.",
+      "A beginner-friendly introduction to APIs, explaining how they work, why they matter, and how developers use them in real-world projects.",
     image: "src/assets/images/blog-image.jpg",
   },
   {
@@ -142,7 +142,7 @@ export const blogData = [
     category: "Productivity",
     title: "Time Management Techniques for Remote Developers",
     description:
-      "Effective time management strategies tailored for remote and hybrid software developers.",
+      "Effective time management techniques designed specifically for remote developers to improve focus, balance, and productivity.",
     image: "src/assets/images/blog-image.jpg",
   },
   {
@@ -155,7 +155,7 @@ export const blogData = [
     category: "Marketing",
     title: "SEO Basics Every Web Developer Should Understand",
     description:
-      "Key SEO concepts explained for web developers to improve search visibility and site performance.",
+      "An essential guide to SEO fundamentals for web developers, covering performance, semantic HTML, and search visibility best practices.",
     image: "src/assets/images/blog-image.jpg",
   },
   {
@@ -168,7 +168,7 @@ export const blogData = [
     category: "Design",
     title: "Design Systems: Building Consistent User Experiences",
     description:
-      "Learn how design systems help teams build scalable, consistent, and efficient user interfaces.",
+      "A deep dive into design systems and how they help teams build scalable, consistent, and efficient user experiences.",
     image: "src/assets/images/blog-image.jpg",
   },
   {
@@ -181,7 +181,7 @@ export const blogData = [
     category: "Technology",
     title: "Frontend Performance Optimization Techniques",
     description:
-      "A practical guide to improving frontend performance using modern tools and best practices.",
+      "A practical guide to frontend performance optimization techniques that improve speed, usability, and overall user experience.",
     image: "src/assets/images/blog-image.jpg",
   },
   {
@@ -194,7 +194,7 @@ export const blogData = [
     category: "Design",
     title: "Design Systems: Frontend",
     description:
-      "Learn how design systems help teams build scalable, consistent, and efficient user interfaces.",
+      "An introduction to frontend-focused design systems, explaining how reusable components and standards improve development efficiency.",
     image: "src/assets/images/blog-image.jpg",
   },
 ];
