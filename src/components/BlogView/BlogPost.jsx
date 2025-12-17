@@ -5,7 +5,14 @@ import { blogContent } from "../../data/blogContent";
 export const BlogPost = ({ blog }) => {
 
   // Here i extracted sections from the blogContent using the ids.
-  const sections = blogContent[blog.id] || [];
+  
+  const sections = blog.sections?.length
+  ? blog.sections
+  : blogContent[blog.id] || [];
+
+  console.log(blog.sections);
+  console.log(blogContent[blog.id]);
+
 
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 py-12">

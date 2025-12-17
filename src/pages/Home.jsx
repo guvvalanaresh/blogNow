@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Navbar from '../components/Navbar'
 import CategoryCard from '../components/CategoryCard'
 import '../App.css'
@@ -6,15 +6,19 @@ import BlogCard from '../components/BlogCard'
 import Pagination from '../components/Pagination'
 import { blogData } from '../data/blogData'
 import { useSearch } from '../context/SearchContext'
+import { BlogContext } from '../context/BlogContext.jsx'
 
 const Home = () => {
+
+  const { blogs } = useContext(BlogContext);
+
   const { searchTerm } = useSearch();
   const [category, setCategory] = useState("");
 
   // To know the available categories
-  const categories = [...new Set(blogData.map((blog) => blog.category))]
+  const categories = [...new Set(blogs.map((blog) => blog.category))]
 
-  let filteredBlogs = category ? blogData.filter((blog)=> blog.category === category) : blogData;
+  let filteredBlogs = category ? blogs.filter((blog)=> blog.category === category) : blogs;
 
   // Apply search filtering (ensure this runs before pagination calculations).We should check it first then only it will work properly.After that we can do pagination.
   if (searchTerm) {
