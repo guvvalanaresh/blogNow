@@ -22,8 +22,13 @@ export const BlogProvider = ( { children} ) => {
         return blogs.find((blog) => blog.id === Number(id));
     }
 
+    const deleteBlog = (id) => {
+        setBlogs((prev) => prev.filter((blog) => blog.id !== Number(id)));
+    };
+
+
     return (
-        <BlogContext.Provider value={{ blogs, addBlog, getBlogById }}>
+        <BlogContext.Provider value={{ blogs, addBlog, getBlogById, deleteBlog }}>
             {children}
         </BlogContext.Provider>
     );
