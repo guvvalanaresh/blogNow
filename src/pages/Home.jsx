@@ -4,7 +4,6 @@ import CategoryCard from '../components/CategoryCard'
 import '../App.css'
 import BlogCard from '../components/BlogCard'
 import Pagination from '../components/Pagination'
-import { blogData } from '../data/blogData'
 import { useSearch } from '../context/SearchContext'
 import { BlogContext } from '../context/BlogContext.jsx'
 
@@ -44,7 +43,7 @@ const Home = () => {
   // console.log(filteredBlogs);
 
   return (
-    <div className='bg-[#F0F0F0]'>
+    <div className='bg-[#F0F0F0] h-screen'>
       <Navbar />
       <div className='grid grid-cols-[250px_1fr] gap-4 ml-8 mt-6'>
         <div>

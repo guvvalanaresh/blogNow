@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { Header } from '../components/BlogView/Header';
 import { BlogPost } from '../components/BlogView/BlogPost';
 import { useNavigate, useParams } from 'react-router-dom';
-import { blogData } from '../data/blogData';
 import { BlogContext } from '../context/BlogContext';
 
 export default function BlogViewPage() {
