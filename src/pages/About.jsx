@@ -7,7 +7,7 @@ export default function About() {
     <div className="min-h-screen bg-[#F0F0F0]">
       <Navbar />
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        <div className="bg-gradient-to-r from-blue-50 to-white rounded-xl p-6 flex items-center gap-4 mb-8">
+        <div className="bg-linear-to-r from-blue-50 to-white rounded-xl p-6 flex items-center gap-4 mb-8">
           <img src="/blog-logo.png" alt="blogNow" className="w-14 h-14 rounded-md shadow-sm" />
           <div>
             <h1 className="text-2xl font-extrabold">blogNow</h1>

@@ -8,6 +8,8 @@ import BlogEditPage from "./pages/BlogEditPage"
 import About from './pages/About'
 import Contact from './pages/Contact'
 import { SearchProvider } from './context/SearchContext'
+import Login from './pages/Login'
+import Signup from './pages/SignUp'
 
 function App() {
 
@@ -20,6 +22,8 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="/:id" element={<BlogViewPage />} />
         <Route path="/edit-blog" element={<BlogEditPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </SearchProvider>
   )
