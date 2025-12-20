@@ -43,7 +43,7 @@ const Home = () => {
   // console.log(filteredBlogs);
 
   return (
-    <div className='bg-[#F0F0F0] h-screen'>
+    <div className='bg-[#F0F0F0] min-h-screen'>
       <Navbar />
       <div className='grid grid-cols-[250px_1fr] gap-4 ml-8 mt-6'>
         <div>

@@ -10,7 +10,7 @@ export const initialBlogData = [
     title: "The Future of UI Design: Trends to Watch in 2024",
     description:
       "An in-depth look at UI design trends shaping digital products in 2024.",
-    image: "src/assets/images/blog-image.jpg",
+    image: "/blog-image.jpg",
     sections: [], // IMPORTANT
   },
   // keep all your existing blogs here
